@@ -497,7 +497,7 @@ class RequestRefundView(View):
 
 
 def category_view(request, category):
-    items = Item.objects.filter(category=category)  # match exact code
+    items = Item.objects.filter(category=category) 
     return render(
         request, "category.html", {"object_list": items, "category": category}
     )
